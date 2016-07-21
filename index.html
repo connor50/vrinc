@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VRinc</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style media="screen">
+      * {
+        display: block;
+        margin:0;
+        padding: 0;
+        border:0;
+      }
+      script, style, head {display: none;}
+      html {
+        background: #121212;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+      }
+      section {
+        color: white;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+      }
+      iframe {
+        width: 100%
+      }
+      h1 {
+        margin: auto;
+        font-size: calc(2rem + 3vw);
+      }
+      .landing {
+          background: url(land.gif) no-repeat center center fixed;
+          background-size: cover;
+
+      }
+      .ep-1 {
+        background: url(ep1.jpg) no-repeat center center fixed;
+        background-size: cover;
+      }
+      .ep-2 {
+        background: url(ep2.jpg) no-repeat center center fixed;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <section class= "landing">
+    </section>
+    <section class= "ep-1" data-vid="eYwvJf0_7tg">
+      <h1>Episode: Pilot</h1>
+    </section>
+
+    <section class= "ep-2" data-vid="_yjvDC9SEmU">
+      <h1>Episode: One </h1>
+    </section>
+
+<script type="text/javascript">
+      [...document.querySelectorAll("section")].forEach(x => {
+        x.addEventListener("click", () => {
+          const iframe = document.createElement("iframe");
+          iframe.src = `http://youtube.com/embed/${x.dataset.vid}?autoplay=true`;
+          console.log(iframe.src);
+          x.innerHTML = '';
+          x.appendChild(iframe);
+        });
+      });
+
+</script>
+
+
+
+  </body>
+</html>
