@@ -62,7 +62,7 @@
       [...document.querySelectorAll("section")].forEach(x => {
         x.addEventListener("click", () => {
           const iframe = document.createElement("iframe");
-          iframe.src = `http://youtube.com/embed/${x.dataset.vid}?autoplay=true`;
+          iframe.src = `https://youtube.com/embed/${x.dataset.vid}?autoplay=true`;
           console.log(iframe.src);
           x.innerHTML = '';
           x.appendChild(iframe);
