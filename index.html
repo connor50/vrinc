@@ -50,37 +50,28 @@
     <section class= "ep-1" data-vid="eYwvJf0_7tg">
       <h1>Episode: Pilot</h1>
     </section>
-
     <section class= "ep-2" data-vid="_yjvDC9SEmU">
       <h1>Episode: One </h1>
     </section>
-
-<script type="text/javascript">
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-[].concat(_toConsumableArray(document.querySelectorAll("section"))).forEach(function (x) {
-  x.addEventListener("click", function () {
-    var iframe = document.createElement("iframe");
-    iframe.src = "https://youtube.com/embed/" + x.dataset.vid + "?autoplay=true";
-    iframe.setAttribute('allowfullscreen', true);
-    console.log(iframe.src);
-    x.innerHTML = '';
-    x.appendChild(iframe);
-  });
-});
-
-</script>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-81206006-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
+    <script type="text/javascript">
+      function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+      [].concat(_toConsumableArray(document.querySelectorAll("section"))).forEach(function (x) {
+        x.addEventListener("click", function () {
+          var iframe = document.createElement("iframe");
+          iframe.src = "https://youtube.com/embed/" + x.dataset.vid + "?autoplay=true";
+          iframe.setAttribute('allowfullscreen', true);
+          x.innerHTML = '';
+          x.appendChild(iframe);
+        });
+      });
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-81206006-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>
