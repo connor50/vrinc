@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>VRinc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <style media="screen">
@@ -24,6 +25,7 @@
         height: 100vh;
         position: relative;
         display: flex;
+        background-size: cover !important;
       }
       iframe {
         width: 100%
@@ -33,17 +35,13 @@
         font-size: calc(2rem + 3vw);
       }
       .landing {
-          background: url(land.gif) no-repeat center center fixed;
-          background-size: cover;
-
+        background: url(land.gif) no-repeat center center scroll;
       }
       .ep-1 {
-        background: url(ep1.jpg) no-repeat center center fixed;
-        background-size: cover;
+        background: url(ep1.jpg) no-repeat center center scroll;
       }
       .ep-2 {
-        background: url(ep2.jpg) no-repeat center center fixed;
-        background-size: cover;
+        background: url(ep2.jpg) no-repeat center center scroll;
       }
     </style>
   </head>
@@ -58,16 +56,17 @@
     </section>
 
 <script type="text/javascript">
-      [...document.querySelectorAll("section")].forEach(x => {
-        x.addEventListener("click", () => {
-          const iframe = document.createElement("iframe");
-          iframe.src = `https://youtube.com/embed/${x.dataset.vid}?autoplay=true`;
-          iframe.setAttribute('allowfullscreen', true);
-          console.log(iframe.src);
-          x.innerHTML = '';
-          x.appendChild(iframe);
-        });
-      });
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+[].concat(_toConsumableArray(document.querySelectorAll("section"))).forEach(function (x) {
+  x.addEventListener("click", function () {
+    var iframe = document.createElement("iframe");
+    iframe.src = "https://youtube.com/embed/" + x.dataset.vid + "?autoplay=true";
+    iframe.setAttribute('allowfullscreen', true);
+    console.log(iframe.src);
+    x.innerHTML = '';
+    x.appendChild(iframe);
+  });
+});
 
 </script>
 
